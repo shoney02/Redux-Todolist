@@ -19,13 +19,13 @@ const todosSlice = createSlice({
   initialState,
   reducers: {
     addTodo: (state, action) => {
-      return [...state.todos, action.payload];
+      state.todos = [...state.todos, action.payload];
     },
     deleteTodo: (state, action) => {
-      return state.todos.filter((todo) => todo.id !== action.payload.id);
+      state.todos = state.todos.filter((todo) => todo.id !== action.payload.id);
     },
     toggleTodo: (state, action) => {
-      return state.todos.map((todo) =>
+      state.todos = state.todos.map((todo) =>
         todo.id === action.payload.id ? { ...todo, isDone: !todo.isDone } : todo
       );
     },

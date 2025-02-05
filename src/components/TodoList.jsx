@@ -1,7 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import { deleteTodo, toggleTodo } from "../redux/moduels/todos";
+import { deleteTodo, toggleTodo } from "../redux/slices/todosSlice";
+// import { deleteTodo, toggleTodo } from "../redux/moduels/todos";
 
 const TodoList = () => {
   const { todos } = useSelector((state) => state.todos);

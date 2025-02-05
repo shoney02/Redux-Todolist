@@ -4,12 +4,19 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   todos: [
     {
-      id: 1,
+      id: new Date().getTime(),
       title: "react를 배워봅시다.",
+      isDone: true,
     },
     {
-      id: 2,
+      id: new Date().getTime() + 1,
       title: "redux를 배워봅시다.",
+      isDone: false,
+    },
+    {
+      id: new Date().getTime() + 1,
+      title: "redux를 배워봅시다.",
+      isDone: true,
     },
   ],
 };
